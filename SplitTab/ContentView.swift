@@ -28,6 +28,8 @@ struct ContentView: View {
         return amountPerPerson
     }
     
+    // TODO: Add custom tip ammount
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -65,9 +67,6 @@ struct ContentView: View {
                 Section("Total Amount per Person (including tip)") {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
-                
-                
-                
             }
             .navigationTitle("SplitTab")
             .toolbar {
